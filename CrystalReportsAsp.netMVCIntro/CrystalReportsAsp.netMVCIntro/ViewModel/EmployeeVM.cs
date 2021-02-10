@@ -29,6 +29,7 @@ namespace CrystalReportsAsp.netMVCIntro.ViewModel
         [StringLength(15)]
         [DisplayName("Phone Number*")]
         [Required]
+        [RegularExpression("^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$", ErrorMessage = "Not a valid email")]
         public string Phone { get; set; }
 
         [DisplayName("Years of Exprience*")]
